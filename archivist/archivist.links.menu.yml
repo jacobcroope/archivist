@@ -1,0 +1,12 @@
+# Define the menu links for this module
+
+entity.archivist_history_record.collection:
+  title: 'Archivist: History Record Listing'
+  route_name: entity.archivist_history_record.collection
+  description: 'List History Records'
+  weight: 10
+archivist_history_record.admin.structure.settings:
+  title: History Record Settings
+  description: 'Configure History Record'
+  route_name:  archivist.history_record_settings
+  parent: system.admin_structure

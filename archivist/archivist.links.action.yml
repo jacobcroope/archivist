@@ -1,0 +1,11 @@
+# All action links for this module
+
+archivist.history_record_add:
+  # Which route will be called by the link
+  route_name: archivist.history_record_add
+  title: 'Add History Record'
+
+  # Where will the link appear, defined by route name.
+  appears_on:
+    - entity.archivist_history_record.collection
+    - entity.archivist_history_record.canonical

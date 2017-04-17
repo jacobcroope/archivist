@@ -1,0 +1,58 @@
+# This file brings everything together. Very nifty!
+
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+entity.archivist_history_record.canonical:
+  path: '/archivist_history_record/{archivist_history_record}'
+  defaults:
+  # Calls the view controller, defined in the annotation of the history record entity
+    _entity_view: 'archivist_history_record'
+    _title: 'History Record Content'
+  requirements:
+  # Calls the access controller of the entity, $operation 'view'
+    _entity_access: 'archivist_history_record.view'
+
+entity.archivist_history_record.collection:
+  path: '/archivist_history_record/list'
+  defaults:
+  # Calls the list controller, defined in the annotation of the history record entity.
+    _entity_list: 'archivist_history_record'
+    _title: 'History Record List'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view history record'
+
+archivist.history_record_add:
+  path: '/archivist_history_record/add'
+  defaults:
+  # Calls the form.add controller, defined in the history record entity.
+    _entity_form: archivist_history_record.add
+    _title: 'Add History Record'
+  requirements:
+    _entity_create_access: 'archivist_history_record'
+
+entity.archivist_history_record.edit_form:
+  path: '/archivist_history_record/{archivist_history_record}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the history record entity.
+    _entity_form: archivist_history_record.edit
+    _title: 'Edit History Record'
+  requirements:
+    _entity_access: 'archivist_history_record.edit'
+
+entity.archivist_history_record.delete_form:
+  path: '/history_record/{archivist_history_record}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the history record entity.
+    _entity_form: archivist_history_record.delete
+    _title: 'Delete History Record'
+  requirements:
+    _entity_access: 'archivist_history_record.delete'
+
+archivist.history_record_settings:
+  path: 'admin/structure/archivist_history_record_settings'
+  defaults:
+    _form: '\Drupal\archivist\Form\HistoryRecordSettingsForm'
+    _title: 'History Record Settings'
+  requirements:
+    _permission: 'administer history entity'

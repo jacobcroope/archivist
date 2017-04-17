@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains Drupal\archivist\archivist.module.
+ */
+
+/**
+ * @defgroup archivist Example: Archivist Entity
+ * @ingroup examples
+ * @{
+ * Implement a History Record entity.
+ *
+ * This module implements a History Record Entity.
+ *
+ * This is an example of a fieldable content entity used to hold structured
+ * information without the overhead of using a content type. It is defined
+ * programmatically and we will expose the main techniques to handle and expose
+ * the contents.
+ *
+ * We define a content entity named 'History Record'. With it, we demonstrate the main
+ * tasks for an entity:
+ * - define
+ * - save
+ * - load
+ * - view
+ * - edit
+ * - delete
+ * - control access
+ *
+ * Where ever possible, we use the amazing tools built into D8 natively.
+ * }
+ */

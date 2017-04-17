@@ -1,0 +1,22 @@
+# Define the 'local' links for the module
+
+history_record.settings_tab:
+  route_name: archivist.history_record_settings
+  title: Settings
+  base_route: archivist.history_record_settings
+
+history_record.view:
+  route_name: entity.archivist_history_record.canonical
+  base_route: entity.archivist_history_record.canonical
+  title: View
+
+history_record.page_edit:
+  route_name: entity.archivist_history_record.edit_form
+  base_route: entity.archivist_history_record.canonical
+  title: Edit
+
+history_record.delete_confirm:
+  route_name:  entity.archivist_history_record.delete_form
+  base_route:  entity.archivist_history_record.canonical
+  title: Delete
+  weight: 10
