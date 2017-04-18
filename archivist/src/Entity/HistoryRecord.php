@@ -223,8 +223,8 @@ class HistoryRecord extends ContentEntityBase implements HistoryRecordInterface 
     // We set display options for the view as well as the form.
     // Users with correct privileges can change the view and edit configuration.
     $fields['name'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Name'))
-      ->setDescription(t('The name, lable, or displayed title of the History Record.'))
+      ->setLabel(t('Title'))
+      ->setDescription(t('The name, label, or displayed title of the History Record.'))
       ->setSettings(array(
         'default_value' => '',
         'max_length' => 255,
@@ -262,18 +262,20 @@ class HistoryRecord extends ContentEntityBase implements HistoryRecordInterface 
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    // Gender field for the contact.
+      
+      
+    // Format field for the history record.
     // ListTextType with a drop down menu widget.
-    // The values shown in the menu are 'male' and 'female'.
+    // The values shown in the menu are 'still image' and 'audio' and 'video', etc.
     // In the view the field content is shown as string.
     // In the form the choices are presented as options list.
-    $fields['gender'] = BaseFieldDefinition::create('list_string')
-      ->setLabel(t('Gender'))
-      ->setDescription(t('The gender of the Contact entity.'))
+    $fields['format'] = BaseFieldDefinition::create('list_string')
+      ->setLabel(t('Format'))
+      ->setDescription(t('The format of the item being submitted.'))
       ->setSettings(array(
         'allowed_values' => array(
-          'female' => 'female',
-          'male' => 'male',
+          'Color Photograph' => 'Color Photograph',
+          'Black and White Photograph' => 'Black and White Photograph',
         ),
       ))
       ->setDisplayOptions('view', array(
@@ -287,6 +289,280 @@ class HistoryRecord extends ContentEntityBase implements HistoryRecordInterface 
       ))
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
+      
+      
+	// Subject field for form
+    // We set display options for the view as well as the form.
+    // Users with correct privileges can change the view and edit configuration.
+    $fields['subject'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Subject'))
+      ->setDescription(t('The category of the history record.'))
+      ->setSettings(array(
+        'default_value' => '',
+        'max_length' => 100,
+        'text_processing' => 0,
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -6,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'weight' => -6,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+
+    // Time Period
+    // ListTextType with a drop down menu widget.
+    // The values shown in the menu are 'male' and 'female'.
+    // In the view the field content is shown as string.
+    // In the form the choices are presented as options list.
+    $fields['time_period'] = BaseFieldDefinition::create('list_string')
+      ->setLabel(t('Time Period'))
+      ->setDescription(t('The time period within the decade the history object was created.'))
+      ->setSettings(array(
+        'allowed_values' => array(
+          '1900s' => '1900s',
+          '1910s' => '1910s',
+          '1920s' => '1920s',
+          '1930s' => '1930s',
+          '1940s' => '1940s',
+          '1950s' => '1950s',
+          '1960s' => '1960s',
+          '1970s' => '1970s',
+          '1980s' => '1980s',
+          '1990s' => '1990s',
+        ),
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'options_select',
+        'weight' => -4,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+	// Place
+    // We set display options for the view as well as the form.
+    // Users with correct privileges can change the view and edit configuration.
+    $fields['place'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Place'))
+      ->setDescription(t('The storage location of the history object.'))
+      ->setSettings(array(
+        'default_value' => '',
+        'max_length' => 50,
+        'text_processing' => 0,
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -6,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'weight' => -6,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+
+	// Description
+    $fields['description'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Description'))
+      ->setDescription(t('A detailed description of the history object.'))
+      ->setSettings(array(
+        'default_value' => '',
+        'max_length' => 500,
+        'text_processing' => 0,
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -5,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'weight' => -5,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+      
+      
+    // Creator
+    // We set display options for the view as well as the form.
+    // Users with correct privileges can change the view and edit configuration.
+    $fields['creator'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Creator'))
+      ->setDescription(t('The creator of the history creator.'))
+      ->setSettings(array(
+        'default_value' => '',
+        'max_length' => 50,
+        'text_processing' => 0,
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -6,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'weight' => -6,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+      
+      
+	// Date of original
+    // We set display options for the view as well as the form.
+    // Users with correct privileges can change the view and edit configuration.
+    $fields['date_of_original'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Date of Original'))
+      ->setDescription(t('The date of the orginal history object.'))
+      ->setSettings(array(
+        'default_value' => '',
+        'max_length' => 50,
+        'text_processing' => 0,
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -6,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'weight' => -6,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    // Collection
+    // We set display options for the view as well as the form.
+    // Users with correct privileges can change the view and edit configuration.
+    $fields['collection'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Collection'))
+      ->setDescription(t('The name of the collection the history record is stored in, if applicable.'))
+      ->setSettings(array(
+        'default_value' => '',
+        'max_length' => 50,
+        'text_processing' => 0,
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -6,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'weight' => -6,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+      
+      
+    // Source
+    // We set display options for the view as well as the form.
+    // Users with correct privileges can change the view and edit configuration.
+    $fields['source'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Source'))
+      ->setDescription(t('The specific file the history object is stored in.'))
+      ->setSettings(array(
+        'default_value' => '',
+        'max_length' => 50,
+        'text_processing' => 0,
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -6,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'weight' => -6,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    // Submitting Institution
+    // We set display options for the view as well as the form.
+    // Users with correct privileges can change the view and edit configuration.
+    $fields['submitting_institution'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Submitting Institution'))
+      ->setDescription(t('Where the history object was submitted from.'))
+      ->setSettings(array(
+        'default_value' => '',
+        'max_length' => 50,
+        'text_processing' => 0,
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -6,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'weight' => -6,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    // Rights
+    // We set display options for the view as well as the form.
+    // Users with correct privileges can change the view and edit configuration.
+    $fields['rights'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Rights'))
+      ->setDescription(t('How the history object is allowed to be used.'))
+      ->setSettings(array(
+        'default_value' => '',
+        'max_length' => 200,
+        'text_processing' => 0,
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -6,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'weight' => -6,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+	// Type of history object
+    // ListTextType with a drop down menu widget.
+    // The values shown in the menu are 'male' and 'female'.
+    // In the view the field content is shown as string.
+    // In the form the choices are presented as options list.
+    $fields['type'] = BaseFieldDefinition::create('list_string')
+      ->setLabel(t('Type'))
+      ->setDescription(t('The type of file the history object is.'))
+      ->setSettings(array(
+        'allowed_values' => array(
+          'Photograph' => 'Photograph',
+          'Document' => 'Document',
+          'Audio Recording' => 'Audio Recording',
+          'Video Recording' => 'Video Recording',
+        ),
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -4,
+      ))
+      ->setDisplayOptions('form', array(
+        'type' => 'options_select',
+        'weight' => -4,
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
 
     // Owner field of the contact.
     // Entity reference field, holds the reference to the user object.
