@@ -1,0 +1,35 @@
+uuid: c6f79bd2-16f0-402f-9aa8-d9ae8d48c1fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - archivist
+    - options
+_core:
+  default_config_hash: w1ycHOi21Wav_n9Ez_2fEXS1MBEu3WjBBrOFDQlTIg8
+id: archivist_history_record.field_type
+field_name: field_type
+entity_type: archivist_history_record
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Photograph
+      label: Photograph
+    -
+      value: Document
+      label: Document
+    -
+      value: 'Audio Recording'
+      label: 'Audio Recording'
+    -
+      value: 'Video Recording'
+      label: 'Video Recording'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

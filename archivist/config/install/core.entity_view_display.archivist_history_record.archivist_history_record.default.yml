@@ -1,0 +1,179 @@
+uuid: d50077dd-cbac-449e-ac25-01a84862c709
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.archivist_history_record.archivist_history_record.field_date_of_original
+    - field.field.archivist_history_record.archivist_history_record.field_description
+    - field.field.archivist_history_record.archivist_history_record.field_file_upload
+    - field.field.archivist_history_record.archivist_history_record.field_format
+    - field.field.archivist_history_record.archivist_history_record.field_location
+    - field.field.archivist_history_record.archivist_history_record.field_rights
+    - field.field.archivist_history_record.archivist_history_record.field_time_period
+    - field.field.archivist_history_record.archivist_history_record.field_type
+  module:
+    - archivist
+    - file
+    - options
+    - text
+    - user
+_core:
+  default_config_hash: Zp5kk8FZ42-Re0N5XIKbBG0KV_eRMciUuJSxR89nzJk
+id: archivist_history_record.archivist_history_record.default
+targetEntityType: archivist_history_record
+bundle: archivist_history_record
+mode: default
+content:
+  collection:
+    label: above
+    type: string
+    weight: 8
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  creator:
+    label: above
+    type: string
+    weight: 6
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  date_of_original:
+    label: above
+    type: string
+    weight: 7
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  description:
+    label: above
+    type: string
+    weight: 5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_date_of_original:
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_description:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_file_upload:
+    weight: 29
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_format:
+    weight: 25
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_location:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_rights:
+    weight: 27
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_time_period:
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_type:
+    weight: 28
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  format:
+    label: above
+    type: string
+    weight: 10
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  location:
+    label: above
+    type: string
+    weight: 4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    label: above
+    type: string
+    weight: 1
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  rights:
+    label: above
+    type: string
+    weight: 12
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  source:
+    label: above
+    type: string
+    weight: 9
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  subject:
+    label: above
+    type: string
+    weight: 2
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  submitting_institution:
+    label: above
+    type: string
+    weight: 11
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  time_period:
+    label: above
+    type: string
+    weight: 3
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  type:
+    label: above
+    type: string
+    weight: 13
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  upload_date:
+    label: above
+    type: string
+    weight: 14
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: above
+    type: author
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

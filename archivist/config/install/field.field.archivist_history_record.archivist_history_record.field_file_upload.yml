@@ -1,0 +1,29 @@
+uuid: e9f6e756-2d0e-4bfb-88c3-7257a0eadf0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.archivist_history_record.field_file_upload
+  module:
+    - archivist
+    - file
+_core:
+  default_config_hash: IkH_Ge3Ih0z3gCqPgaxMMXeulTCfPYwELxzMw3fZuUs
+id: archivist_history_record.archivist_history_record.field_file_upload
+field_name: field_file_upload
+entity_type: archivist_history_record
+bundle: archivist_history_record
+label: 'File Upload'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt doc docx mp3 mp4 avi'
+  max_filesize: '2 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

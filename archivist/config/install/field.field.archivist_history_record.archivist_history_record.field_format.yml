@@ -1,0 +1,23 @@
+uuid: bfec7702-59b6-4bb2-9ada-d1ff586aaf50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.archivist_history_record.field_format
+  module:
+    - archivist
+    - text
+_core:
+  default_config_hash: qsWrgnmw37MSJR5YmAx-fBbYf8UILwBIbRNMPqV57gs
+id: archivist_history_record.archivist_history_record.field_format
+field_name: field_format
+entity_type: archivist_history_record
+bundle: archivist_history_record
+label: Format
+description: 'The format of the item being submitted.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

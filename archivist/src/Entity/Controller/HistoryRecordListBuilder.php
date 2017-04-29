@@ -78,9 +78,12 @@ class HistoryRecordListBuilder extends EntityListBuilder {
    */
   public function buildHeader() {
     $header['id'] = $this->t('History Record ID');
-    $header['name'] = $this->t('Name');
-    $header['first_name'] = $this->t('First Name');
-    $header['gender'] = $this->t('Gender');
+	$header['name'] = $this->t('Title');
+	$header['subject'] = $this->t('Subject');
+	$header['submitting_instution'] = $this->t('Submitting Institution');
+	$header['upload_date'] = $this->t('Upload Date');
+	
+    
     return $header + parent::buildHeader();
   }
 
@@ -91,8 +94,9 @@ class HistoryRecordListBuilder extends EntityListBuilder {
     /* @var $entity \Drupal\archivist\Entity\HistoryRecord */
     $row['id'] = $entity->id();
     $row['name'] = $entity->link();
-    $row['first_name'] = $entity->first_name->value;
-    $row['gender'] = $entity->gender->value;
+    $row['subject'] = $entity->subject->value;
+    $row['submitting_institution'] = $entity->submitting_institution->value;
+    $row['upload_date'] = $entity->upload_date->value;
     return $row + parent::buildRow($entity);
   }
 

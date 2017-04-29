@@ -1,0 +1,23 @@
+uuid: c88e89af-4d96-4662-a360-485629cf9336
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.archivist_history_record.field_time_period
+  module:
+    - archivist
+    - options
+_core:
+  default_config_hash: C4YPvcl5RZ9khdpxSPvFcRxUVswfd9g8hVbHvtkcsKY
+id: archivist_history_record.archivist_history_record.field_time_period
+field_name: field_time_period
+entity_type: archivist_history_record
+bundle: archivist_history_record
+label: 'Time Period'
+description: 'The decade in which the history record was created. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

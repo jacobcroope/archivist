@@ -1,0 +1,22 @@
+uuid: dfc63a06-c862-4978-82ae-706cb7e5e13f
+langcode: en
+status: true
+dependencies:
+  module:
+    - archivist
+    - text
+_core:
+  default_config_hash: Lvm_4xdAAfPNx0aGQQUw5L51ZYupbxMkGcisjLJrshY
+id: archivist_history_record.field_location
+field_name: field_location
+entity_type: archivist_history_record
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

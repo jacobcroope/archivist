@@ -1,0 +1,21 @@
+uuid: 77ac3df2-de4b-4de4-85ff-7ebd36d4f432
+langcode: en
+status: true
+dependencies:
+  module:
+    - archivist
+    - text
+_core:
+  default_config_hash: '-pST7Adp6mw8jr2EBKXARdQcyKBWddaoWW1dv776DPM'
+id: archivist_history_record.field_description
+field_name: field_description
+entity_type: archivist_history_record
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
