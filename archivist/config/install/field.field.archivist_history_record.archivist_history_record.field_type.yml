@@ -1,0 +1,23 @@
+uuid: 70818a52-86cb-4f67-b857-a6d5c1e8a7a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.archivist_history_record.field_type
+  module:
+    - archivist
+    - options
+_core:
+  default_config_hash: _q4PWO-sHAx9HZkAXzMkBp_9DhH0XBM7-S_slGdyXpk
+id: archivist_history_record.archivist_history_record.field_type
+field_name: field_type
+entity_type: archivist_history_record
+bundle: archivist_history_record
+label: Type
+description: 'The type of file the history record is.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

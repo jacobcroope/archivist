@@ -1,0 +1,25 @@
+uuid: 8e092f06-8015-42b1-a05f-33fcc06a23d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - archivist
+    - file
+_core:
+  default_config_hash: dI9Vv7kf3rD6vc9vgH_Gl0g6bEIbhZKsYYQuXJ96R9I
+id: archivist_history_record.field_file_upload
+field_name: field_file_upload
+entity_type: archivist_history_record
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,32 @@
+uuid: 1b73c26d-6645-4d14-a882-7df12f7eb079
+langcode: en
+status: true
+dependencies:
+  module:
+    - archivist
+    - options
+_core:
+  default_config_hash: FTxtub5ayu5F8W4CkkiGfcBCLSA_jYgnE1O7YSBtbBI
+id: archivist_history_record.field_rights
+field_name: field_rights
+entity_type: archivist_history_record
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Open to public use'
+      label: 'Open to public use'
+    -
+      value: 'Ask before using'
+      label: 'Ask before using'
+    -
+      value: 'Do not use'
+      label: 'Do not use'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: e3e096a9-f82b-4cca-a528-d2d15a23eec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.archivist_history_record.field_date_of_original
+  module:
+    - archivist
+    - text
+_core:
+  default_config_hash: I-gPMTGoSLJW53SEL1IKPMJ7pE6Q_zjXxHZxEubAaYk
+id: archivist_history_record.archivist_history_record.field_date_of_original
+field_name: field_date_of_original
+entity_type: archivist_history_record
+bundle: archivist_history_record
+label: 'Date of Original'
+description: 'The date of the original history record (as specific as possible). '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,23 @@
+uuid: 4455711d-256a-4b24-a064-c022d96a5db9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.archivist_history_record.field_rights
+  module:
+    - archivist
+    - options
+_core:
+  default_config_hash: ywmhbkGUV7Hh0LmPUo2xCpAuktUWN-9g8oiuB7ozOYc
+id: archivist_history_record.archivist_history_record.field_rights
+field_name: field_rights
+entity_type: archivist_history_record
+bundle: archivist_history_record
+label: Rights
+description: 'How the history record is allowed to be used.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

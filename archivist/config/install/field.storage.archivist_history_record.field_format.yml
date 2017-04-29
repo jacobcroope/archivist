@@ -1,0 +1,22 @@
+uuid: acf0e342-1ed2-41f6-a18d-803342d8f7a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - archivist
+    - text
+_core:
+  default_config_hash: 9jBEq0W6aZZYhVzGJBEbYK42LJ2lqLYu7AAabRiY5hA
+id: archivist_history_record.field_format
+field_name: field_format
+entity_type: archivist_history_record
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

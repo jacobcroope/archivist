@@ -1,0 +1,23 @@
+uuid: 7062b73e-2e1d-493d-a0d0-92435412c50a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.archivist_history_record.field_description
+  module:
+    - archivist
+    - text
+_core:
+  default_config_hash: mlakHwvFhC-x_nnqXPchRumQsnHmpHeKHHj3n8cnddM
+id: archivist_history_record.archivist_history_record.field_description
+field_name: field_description
+entity_type: archivist_history_record
+bundle: archivist_history_record
+label: Description
+description: 'A detailed description of the history record.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
